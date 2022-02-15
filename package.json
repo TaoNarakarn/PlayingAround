@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
-    "client": "npm start --prefix frontend"
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "mongoose": "^6.2.1"
   },
   "devDependencies": {
+    "concurrently": "^7.0.0",
     "create-react-app": "^5.0.0",
     "eslint": "^8.8.0",
     "nodemon": "^2.0.15"
